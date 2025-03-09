@@ -6,6 +6,7 @@ import { QUERIES } from "~/constants"
 import Slider from "./review-slides"
 import { Product, ProductResponse } from "~/types"
 import { DBQUERIES } from "~/queries"
+import Link from "next/link"
 
 const MainSectionWrapper = styled.div`
 	padding: 3.125rem 0;
@@ -139,7 +140,15 @@ export default function MainSection({ fallbackData }: { fallbackData: object }) 
 				</ProductsWrapper>
 			</ProductCardWrapper>
 			<ButtonWrapper>
-				<Button>View All</Button>
+				<Button>
+					<Link
+						href="/shop"
+						prefetch={true}
+						style={{ textDecoration: "none", color: "inherit" }}
+					>
+						View All
+					</Link>
+				</Button>
 			</ButtonWrapper>
 			<HorizontalLine />
 			<MainSectionTitle>TOP SELLING</MainSectionTitle>
@@ -153,7 +162,15 @@ export default function MainSection({ fallbackData }: { fallbackData: object }) 
 				</ProductsWrapper>
 			</ProductCardWrapper>
 			<ButtonWrapper>
-				<Button>View All</Button>
+				<Button>
+					<Link
+						href="/shop"
+						prefetch={true}
+						style={{ textDecoration: "none", color: "inherit" }}
+					>
+						View All
+					</Link>
+				</Button>
 			</ButtonWrapper>
 			{/* <CategorySectionWrapper>
 				<MainSectionTitle>BROWSE BY DRESS STYLE</MainSectionTitle>
