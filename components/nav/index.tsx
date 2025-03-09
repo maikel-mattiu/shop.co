@@ -40,14 +40,14 @@ const SearchContainer = styled.div`
 
 	@media (min-width: 769px) {
 		display: block;
-		flex: 2;
+		flex: 2.5;
 		/* max-width: 900px; */
 		margin: 0 1rem;
 	}
 `
 
 const IconWrapper = styled.div`
-  display: revert;
+	display: revert;
 	@media (min-width: 767px) {
 		display: none;
 	}
@@ -129,8 +129,13 @@ const ResultPrice = styled.div`
 
 const Actions = styled.div`
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+
+	@media (min-width: 768px) {
+		flex: 1;
+	}
 `
 
 const MobileSearch = styled.button`
@@ -211,7 +216,7 @@ const NavLink = styled(Link)`
 	}
 `
 
-export default function Navbar({allProducts}: {allProducts: Product[]}) {
+export default function Navbar({ allProducts }: { allProducts: Product[] }) {
 	const [showSearch, setShowSearch] = useState(false)
 	const [searchQuery, setSearchQuery] = useState("")
 	const [searchResults, setSearchResults] = useState<Product[]>([])
@@ -230,7 +235,7 @@ export default function Navbar({allProducts}: {allProducts: Product[]}) {
 		}
 
 		// Filter mock products based on search query
-		const results = products.filter((product : Product) =>
+		const results = products.filter((product: Product) =>
 			product.title.toLowerCase().includes(query.toLowerCase())
 		)
 
@@ -343,10 +348,6 @@ export default function Navbar({allProducts}: {allProducts: Product[]}) {
 						</MobileSearch>
 
 						<CartIcon />
-
-						<IconButton>
-							<User size={24} />
-						</IconButton>
 					</Actions>
 				</Nav>
 

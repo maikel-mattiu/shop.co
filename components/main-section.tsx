@@ -155,7 +155,7 @@ export default function MainSection({ fallbackData }: { fallbackData: object }) 
 			<ButtonWrapper>
 				<Button>View All</Button>
 			</ButtonWrapper>
-			<CategorySectionWrapper>
+			{/* <CategorySectionWrapper>
 				<MainSectionTitle>BROWSE BY DRESS STYLE</MainSectionTitle>
 				<BoxWrapper>
 					<Box />
@@ -163,7 +163,7 @@ export default function MainSection({ fallbackData }: { fallbackData: object }) 
 					<Box />
 					<Box />
 				</BoxWrapper>
-			</CategorySectionWrapper>
+			</CategorySectionWrapper> */}
 			<Slider products={products} />
 		</MainSectionWrapper>
 	)

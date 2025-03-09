@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import styled from "styled-components"
 import { QUERIES } from "~/constants"
 
@@ -9,12 +10,19 @@ export default function Hero() {
 			<HeroTextContent>
 				<MainText>FIND CLOTHES THAT MATCHES YOUR STYLE</MainText>
 				<SubText>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
-					perspiciatis. Architecto quo rerum, hic minima ducimus obcaecati esse
-					deserunt dignissimos iste itaque sint, adipisci assumenda eum officia
-					repellat, enim ipsa.
+					Browse through our diverse range of meticulously crafted garments,
+					designed to bring out your individuality and cater to your sense of
+					style.
 				</SubText>
-				<Button>SHOP NOW</Button>
+				<Button>
+					<Link
+						href="/shop"
+						prefetch={true}
+						style={{ textDecoration: "none", color: "inherit" }}
+					>
+						SHOP NOW
+					</Link>
+				</Button>
 				<StatsComponent />
 			</HeroTextContent>
 			<HeroImageContent>
