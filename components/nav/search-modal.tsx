@@ -60,6 +60,7 @@ const Header = styled.div`
 `
 
 const SearchInput = styled.input`
+	font-family: var(--font-satoshi);
 	flex: 1;
 	padding: 0.75rem;
 	border: none;
@@ -86,6 +87,7 @@ const CloseButton = styled.button`
 `
 
 const Results = styled.div`
+	font-family: var(--font-satoshi);
 	flex: 1;
 	overflow-y: auto;
 	padding: 0.5rem;

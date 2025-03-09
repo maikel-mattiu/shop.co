@@ -58,6 +58,7 @@ const SearchWrapper = styled.div`
 `
 
 const SearchInput = styled.input`
+	font-family: var(--font-satoshi);
 	width: 100%;
 	padding: 0.75rem 1rem 0.75rem 2.5rem;
 	border: none;
@@ -80,6 +81,7 @@ const SearchIcon = styled.div`
 `
 
 const SearchResults = styled.div`
+	font-family: var(--font-satoshi);
 	position: absolute;
 	top: calc(100% + 0.5rem);
 	left: 0;
