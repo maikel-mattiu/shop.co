@@ -235,27 +235,6 @@ export default function Footer() {
 		<>
 			<FooterMaxWidthWrapper>
 				<FooterContainer>
-					{/* <NewsletterSection>
-						<NewsLetterTitleWrapper>
-							<NewsletterTitle>
-								STAY UP TO DATE ABOUT OUR LATEST OFFERS
-							</NewsletterTitle>
-						</NewsLetterTitleWrapper>
-						<NewsletterForm onSubmit={(e) => e.preventDefault()}>
-							<EmailInput>
-								<Mail size={20} />
-								<input
-									type="email"
-									placeholder="Enter your email address"
-									required
-								/>
-							</EmailInput>
-							<SubscribeButton type="submit">
-								Subscribe to Newsletter
-							</SubscribeButton>
-						</NewsletterForm>
-					</NewsletterSection> */}
-
 					<FooterGrid>
 						<BrandSection>
 							<Logo>SHOP.CO</Logo>
@@ -368,23 +347,23 @@ export default function Footer() {
 						<Copyright>Shop.co © 2000-2023, All Rights Reserved</Copyright>
 						<PaymentMethods>
 							<img
-								src="/placeholder.svg?height=24&width=38"
+								src="/visa.webp"
 								alt="Visa"
 							/>
 							<img
-								src="/placeholder.svg?height=24&width=38"
+								src="/master-card.webp"
 								alt="Mastercard"
 							/>
 							<img
-								src="/placeholder.svg?height=24&width=38"
-								alt="PayPal"
+								src="/american-express.webp"
+								alt="American Express"
 							/>
 							<img
-								src="/placeholder.svg?height=24&width=38"
+								src="/apple-pay.webp"
 								alt="Apple Pay"
 							/>
 							<img
-								src="/placeholder.svg?height=24&width=38"
+								src="/google-pay.webp"
 								alt="Google Pay"
 							/>
 						</PaymentMethods>

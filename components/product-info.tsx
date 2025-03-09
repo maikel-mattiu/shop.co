@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { Star, Minus, Plus, ShoppingCart } from "lucide-react"
 import type { Product } from "../types"
 import { useRouter } from "next/navigation"
+import { useCart } from "~/context/cart-context"
 
 const Container = styled.div`
 	font-family: "Satoshi", sans-serif;
@@ -168,8 +169,23 @@ interface ProductInfoProps {
 }
 
 export default function ProductInfo({ product }: ProductInfoProps) {
-	const router = useRouter()
 	const [quantity, setQuantity] = useState(1)
+
+	const { addToCart } = useCart()
+
+	const handleAddToCart = () => {
+		addToCart({
+			id: product.id,
+			title: product.title,
+			discount: product.discountPercentage,
+			price: product.price,
+			quantity: quantity,
+			image: product.images[0]
+		})
+
+		// Optional: Show confirmation message
+		alert(`Added ${quantity} ${product.title} to cart`)
+	}
 
 	return (
 		<Container>
@@ -214,7 +230,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 						<Plus size={20} />
 					</QuantityButton>
 				</QuantitySelector>
-				<AddToCartButton onClick={() => router.push("/cart")}>
+				<AddToCartButton onClick={handleAddToCart}>
 					<ShoppingCart size={20} />
 					Add to Cart
 				</AddToCartButton>

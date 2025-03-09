@@ -96,7 +96,7 @@ export default function ProductImages({ images }: ProductImagesProps) {
 					<ThumbnailButton
 						key={index}
 						$active={activeImage === index}
-						onClick={() => setActiveImage(index)}
+						onMouseEnter={() => setActiveImage(index)}
 					>
 						<img
 							src={image || "/placeholder.svg"}

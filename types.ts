@@ -28,7 +28,7 @@ export interface Meta {
 }
 
 export interface Product {
-	id: number | string
+	id: number
 	title: string
 	description: string
 	category: string
@@ -76,3 +76,10 @@ export interface ProductResponse {
 	thumbnail: string
 	images: string[]
 }
+
+export interface Brand {
+	id: number
+	brand: string
+	thumbnail: string
+}
+

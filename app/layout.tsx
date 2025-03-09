@@ -4,6 +4,8 @@ import GlobalStyles from "./GlobalStyles"
 import NavigationMenu from "~/components/navigation-menu"
 import StyledComponentsRegistry from "~/lib/registry"
 import Footer from "~/components/footer"
+import { CartProvider } from "~/context/cart-context"
+import Navbar from "~/components/nav"
 
 export const metadata: Metadata = {
 	title: "Shop.Co",
@@ -43,11 +45,15 @@ const satoshi = localFont({
 	variable: "--font-satoshi"
 })
 
-export default function RootLayout({
+export default async function RootLayout({
 	children
 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const allProducts = await fetch("https://dummyjson.com/products/")
+		.then((data) => data.json())
+		.then((data) => data)
+
 	return (
 		<html
 			lang="en"
@@ -56,9 +62,12 @@ export default function RootLayout({
 			<GlobalStyles />
 			<body>
 				<StyledComponentsRegistry>
-					<NavigationMenu />
-					{children}
-					<Footer />
+					<CartProvider>
+						{/* <NavigationMenu /> */}
+						<Navbar allProducts={allProducts} />
+						{children}
+						<Footer />
+					</CartProvider>
 				</StyledComponentsRegistry>
 			</body>
 		</html>
