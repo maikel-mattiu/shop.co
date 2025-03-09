@@ -211,28 +211,6 @@ const NavLink = styled(Link)`
 	}
 `
 
-// Mock search results data
-const mockProducts = [
-	{
-		id: "1",
-		name: "Gradient Graphic T-shirt",
-		price: 145,
-		image: "/placeholder.svg?height=80&width=80"
-	},
-	{
-		id: "2",
-		name: "Checkered Shirt",
-		price: 180,
-		image: "/placeholder.svg?height=80&width=80"
-	},
-	{
-		id: "3",
-		name: "Skinny Fit Jeans",
-		price: 240,
-		image: "/placeholder.svg?height=80&width=80"
-	}
-]
-
 export default function Navbar({allProducts}: {allProducts: Product[]}) {
 	const [showSearch, setShowSearch] = useState(false)
 	const [searchQuery, setSearchQuery] = useState("")

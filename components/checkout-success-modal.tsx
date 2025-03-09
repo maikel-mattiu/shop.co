@@ -46,48 +46,50 @@ const ModalContainerWrappper = styled.div`
 	animation: ${slideIn} 0.4s ease;
 `
 const ModalContainer = styled.div`
-  width: 100%;
-  max-width: 600px;
-  max-height: 90vh;
-  overflow-y: auto;
+	width: 100%;
+	max-width: 600px;
+	max-height: 90vh;
+	overflow-y: auto;
 `
 
 const ModalHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid #f0f0f0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+	border-bottom: 1px solid #f0f0f0;
 `
 
 const CloseButton = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #666;
-  
-  &:hover {
-    color: #000;
-  }
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #666;
+
+	&:hover {
+		color: #000;
+	}
 `
 
 const ModalBody = styled.div`
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+	font-family: var(--font-satoshi);
+	padding: 2rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 `
 
 const SuccessIcon = styled.div`
-  color: #4CAF50;
-  margin-bottom: 1.5rem;
+	color: #4caf50;
+	margin-bottom: 1.5rem;
 `
 
 const Title = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+	font-family: var(--font-integral-cf);
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
 `
 
 const Message = styled.p`
